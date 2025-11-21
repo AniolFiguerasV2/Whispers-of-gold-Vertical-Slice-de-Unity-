@@ -5,7 +5,7 @@ public class DayCicle : MonoBehaviour
     public float dayDuration = 10f;
     public Light directionalLight;
 
-    private float cycleTime = 0f;
+    public float cycleTime = 0f;
     private const float gameHours = 12f;
     public float startRotation = 100f;
 
@@ -13,7 +13,6 @@ public class DayCicle : MonoBehaviour
 
     void Start()
     {
-        if (directionalLight == null)
             directionalLight = GetComponent<Light>();
     }
 
@@ -39,7 +38,6 @@ public class DayCicle : MonoBehaviour
     void EndGame()
     {
         gameEnded = true;
-
-        Application.Quit();
+        Debug.Log(gameEnded);
     }
 }
