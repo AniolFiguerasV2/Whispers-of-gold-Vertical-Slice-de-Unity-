@@ -9,6 +9,7 @@ public class PickUpObjectController : MonoBehaviour
 
     private PlayerInputs inputAction;
     public bool isEquipped;
+    public Hints hints;
 
     public Transform chestHolder;
 
@@ -65,6 +66,7 @@ public class PickUpObjectController : MonoBehaviour
                 gameObject.SetActive(false);
 
                 inputAction.Player.EquipShovel.Disable();
+                hints.ToggleHintMap();
             }
         }
     }
