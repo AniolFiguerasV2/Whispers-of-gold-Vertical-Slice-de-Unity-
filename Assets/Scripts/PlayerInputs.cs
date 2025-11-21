@@ -154,6 +154,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hint"",
+                    ""type"": ""Button"",
+                    ""id"": ""d111803c-01fc-40bc-881b-5e7d038ea125"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -288,6 +297,28 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""PickUp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""17d3a036-bc59-4264-a7d5-8645f04445d0"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""305cc43a-68a6-4ad8-9545-c7dd89978ad3"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -303,6 +334,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Player_Sprinting = m_Player.FindAction("Sprinting", throwIfNotFound: true);
         m_Player_EquipShovel = m_Player.FindAction("EquipShovel", throwIfNotFound: true);
         m_Player_PickUp = m_Player.FindAction("PickUp", throwIfNotFound: true);
+        m_Player_Hint = m_Player.FindAction("Hint", throwIfNotFound: true);
     }
 
     ~@PlayerInputs()
@@ -390,6 +422,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Sprinting;
     private readonly InputAction m_Player_EquipShovel;
     private readonly InputAction m_Player_PickUp;
+    private readonly InputAction m_Player_Hint;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -429,6 +462,10 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/PickUp".
         /// </summary>
         public InputAction @PickUp => m_Wrapper.m_Player_PickUp;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Hint".
+        /// </summary>
+        public InputAction @Hint => m_Wrapper.m_Player_Hint;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -476,6 +513,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @PickUp.started += instance.OnPickUp;
             @PickUp.performed += instance.OnPickUp;
             @PickUp.canceled += instance.OnPickUp;
+            @Hint.started += instance.OnHint;
+            @Hint.performed += instance.OnHint;
+            @Hint.canceled += instance.OnHint;
         }
 
         /// <summary>
@@ -508,6 +548,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @PickUp.started -= instance.OnPickUp;
             @PickUp.performed -= instance.OnPickUp;
             @PickUp.canceled -= instance.OnPickUp;
+            @Hint.started -= instance.OnHint;
+            @Hint.performed -= instance.OnHint;
+            @Hint.canceled -= instance.OnHint;
         }
 
         /// <summary>
@@ -597,5 +640,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPickUp(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Hint" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnHint(InputAction.CallbackContext context);
     }
 }
