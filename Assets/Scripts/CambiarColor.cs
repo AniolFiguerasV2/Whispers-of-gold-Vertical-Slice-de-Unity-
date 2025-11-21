@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CambiarColor : MonoBehaviour
 {
-    public Color nuevoColor = Color.red; // El color que quieres
+    public Color nuevoColor = Color.red;
 
     void Start()
     {
