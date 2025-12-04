@@ -267,6 +267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 117872842}
   - component: {fileID: 117872843}
+  - component: {fileID: 117872844}
   m_Layer: 0
   m_Name: SpawnPoint4
   m_TagString: MonsterSpawners
@@ -310,6 +311,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &117872844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117872841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20c012af3bef8459e1426ef8815e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 7851793215811330034, guid: 889f336564d710e41a18c32e1eebaa4a, type: 3}
+  spawnPoint: {fileID: 117872842}
+  activeTime: 10
 --- !u!1 &122461397
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 160366603}
   - component: {fileID: 160366604}
+  - component: {fileID: 160366605}
   m_Layer: 0
   m_Name: SpawnPoint1
   m_TagString: MonsterSpawners
@@ -472,6 +489,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &160366605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160366602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20c012af3bef8459e1426ef8815e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 7201745238489729991, guid: c2b741d44840edb4f8242d08b233b29c, type: 3}
+  spawnPoint: {fileID: 160366603}
+  activeTime: 10
 --- !u!1 &194212227
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 194212228}
   - component: {fileID: 194212229}
+  - component: {fileID: 194212230}
   m_Layer: 0
   m_Name: SpawnPoint7
   m_TagString: MonsterSpawners
@@ -525,6 +558,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &194212230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194212227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20c012af3bef8459e1426ef8815e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 2273673656481285514, guid: 36351a3a072848f4d9e09892109da351, type: 3}
+  spawnPoint: {fileID: 194212228}
+  activeTime: 10
 --- !u!1 &224072073
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +628,6 @@ GameObject:
   - component: {fileID: 266127005}
   - component: {fileID: 266127004}
   - component: {fileID: 266127007}
-  - component: {fileID: 266127008}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -777,34 +824,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 15, y: 5, z: 15}
   m_Center: {x: 0, y: 1.5, z: -8}
---- !u!114 &266127008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266126999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b56f9f0f29dc9f49969ed29bbbb055d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsters:
-  - {fileID: 7201745238489729991, guid: c2b741d44840edb4f8242d08b233b29c, type: 3}
-  - {fileID: 8578975319253959662, guid: 572c0ff1d6ff6d343940a5d0080b5e5d, type: 3}
-  - {fileID: 2273673656481285514, guid: 36351a3a072848f4d9e09892109da351, type: 3}
-  - {fileID: 7851793215811330034, guid: 889f336564d710e41a18c32e1eebaa4a, type: 3}
-  spawnPoints:
-  - {fileID: 160366603}
-  - {fileID: 681049013}
-  - {fileID: 386526916}
-  - {fileID: 117872842}
-  - {fileID: 826412924}
-  - {fileID: 513029793}
-  - {fileID: 194212228}
-  - {fileID: 2133404538}
-  maxSpawnTime: 5
-  dayCicle: {fileID: 634408249}
 --- !u!1 &272617766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,6 +1223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 386526916}
   - component: {fileID: 386526917}
+  - component: {fileID: 386526918}
   m_Layer: 0
   m_Name: SpawnPoint3
   m_TagString: MonsterSpawners
@@ -1247,6 +1267,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &386526918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386526915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20c012af3bef8459e1426ef8815e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 2273673656481285514, guid: 36351a3a072848f4d9e09892109da351, type: 3}
+  spawnPoint: {fileID: 386526916}
+  activeTime: 10
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,6 +1413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 513029793}
   - component: {fileID: 513029794}
+  - component: {fileID: 513029795}
   m_Layer: 0
   m_Name: SpawnPoint6
   m_TagString: MonsterSpawners
@@ -1421,6 +1457,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &513029795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513029792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20c012af3bef8459e1426ef8815e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 8578975319253959662, guid: 572c0ff1d6ff6d343940a5d0080b5e5d, type: 3}
+  spawnPoint: {fileID: 513029793}
+  activeTime: 10
 --- !u!1 &634408248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +1481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 634408250}
-  - component: {fileID: 634408249}
+  - component: {fileID: 634408251}
   m_Layer: 0
   m_Name: DayCicle
   m_TagString: Untagged
@@ -1438,22 +1489,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &634408249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 634408248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec8f196a899cfbd4cb4c05f079bc520e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dayDuration: 1
-  directionalLight: {fileID: 410087040}
-  cycleTime: 0
-  startRotation: 100
 --- !u!4 &634408250
 Transform:
   m_ObjectHideFlags: 0
@@ -1470,6 +1505,21 @@ Transform:
   - {fileID: 410087041}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &634408251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634408248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09eebf13d6ddc0b4dbf4b53c60003fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hour: 12
+  light: {fileID: 410087041}
+  dayDurationMinutes: 1
 --- !u!1 &681049012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 681049013}
   - component: {fileID: 681049014}
+  - component: {fileID: 681049015}
   m_Layer: 0
   m_Name: SpawnPoint2
   m_TagString: MonsterSpawners
@@ -1523,6 +1574,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &681049015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681049012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20c012af3bef8459e1426ef8815e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 8578975319253959662, guid: 572c0ff1d6ff6d343940a5d0080b5e5d, type: 3}
+  spawnPoint: {fileID: 681049013}
+  activeTime: 10
 --- !u!1 &826412923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,6 +1599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826412924}
   - component: {fileID: 826412925}
+  - component: {fileID: 826412926}
   m_Layer: 0
   m_Name: SpawnPoint5
   m_TagString: MonsterSpawners
@@ -1576,6 +1643,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &826412926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826412923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20c012af3bef8459e1426ef8815e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 7201745238489729991, guid: c2b741d44840edb4f8242d08b233b29c, type: 3}
+  spawnPoint: {fileID: 826412924}
+  activeTime: 10
 --- !u!1 &938953274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,6 +2389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2133404538}
   - component: {fileID: 2133404539}
+  - component: {fileID: 2133404540}
   m_Layer: 0
   m_Name: SpawnPoint8
   m_TagString: MonsterSpawners
@@ -2350,6 +2433,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2133404540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133404537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20c012af3bef8459e1426ef8815e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 7851793215811330034, guid: 889f336564d710e41a18c32e1eebaa4a, type: 3}
+  spawnPoint: {fileID: 2133404538}
+  activeTime: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
